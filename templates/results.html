@@ -30,21 +30,21 @@
     <h3>Weak Topics:</h3>
     <ul>
         {% for topic in weak_topics %}
-            <li>{{ topic }}</li>
+            <li class="bad">{{ topic }}</li>
         {% endfor %}
     </ul>
 
     <h3>Strong Topics:</h3>
     <ul>
         {% for topic in strong_topics %}
-            <li>{{ topic }}</li>
+            <li class="good">{{ topic }}</li>
         {% endfor %}
     </ul>
 
      <h3>Moderate Topics:</h3>
      <ul>
          {% for topic in moderate_topics %}
-             <li>{{ topic }}</li>
+             <li class="avg">{{ topic }}</li>
          {% endfor %}
      </ul>
 

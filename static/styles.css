@@ -66,6 +66,15 @@ ul {
     list-style-type: "✨";
     padding-left: 20px;
 }
+.good{
+    list-style-type: "😎";
+}
+.avg{
+    list-style-type: "🤔";
+}
+.bad{
+    list-style-type: "😫";
+}
 li {
     padding: 5px;
     margin-left: 10px;
