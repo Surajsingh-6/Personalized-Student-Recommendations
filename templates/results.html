@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis Results</title>
+    <link rel="stylesheet" type="text/css" href="../static/styles.css">
+</head>
+<body>
+    <h1>Analysis Results</h1>
+
+    <h2>Topic-Wise Performance Summary:</h2>
+    <table border="1">
+        <tr>
+            <th>Topic</th>
+            <th>Accuracy (%)</th>
+            <th>Average Score</th>
+        </tr>
+        {% for item in topic_performance %}
+        <tr>
+            <td>{{ item.topic }}</td>
+            <td>{{ item.accuracy * 100 | round(2) }}</td>
+            <td>{{ item.score | round(2) }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <h2>Recommendations:</h2>
+
+    <h3>Weak Topics:</h3>
+    <ul>
+        {% for topic in weak_topics %}
+            <li>{{ topic }}</li>
+        {% endfor %}
+    </ul>
+
+    <h3>Strong Topics:</h3>
+    <ul>
+        {% for topic in strong_topics %}
+            <li>{{ topic }}</li>
+        {% endfor %}
+    </ul>
+
+     <h3>Moderate Topics:</h3>
+     <ul>
+         {% for topic in moderate_topics %}
+             <li>{{ topic }}</li>
+         {% endfor %}
+     </ul>
+
+     <h2>Student Persona Summary:</h2>
+     <table border="1">
+         <tr><th>Persona</th><th>Count</th></tr>
+         {% for persona in persona_summary %}
+         <tr><td>{{ persona.student_persona }}</td><td>{{ persona.count }}</td></tr>
+         {% endfor %}
+     </table>
+
+     <br><a href="index.html">Go Back</a>
+</body>
+</html>
